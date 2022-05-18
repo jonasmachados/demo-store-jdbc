@@ -1,5 +1,8 @@
 package application;
 
+import db.DbException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
@@ -12,6 +15,8 @@ import model.dao.impl.SellerDaoJDBC;
 public class ProgramTestSeller {
 
     public static void main(String[] args) {
+
+        SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
 
         Scanner sc = new Scanner(System.in);
 
@@ -35,9 +40,13 @@ public class ProgramTestSeller {
         }
 
         System.out.println("\n=== TEST 4 ====");
-        Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
-        sellerDao.insert(newSeller);
-        System.out.println("Insert! New id = " + newSeller.getId());
+        try {
+            Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", formatador.parse("19/01/1985"), 4000.0, department);
+            sellerDao.insert(newSeller);
+            System.out.println("Insert! New id = " + newSeller.getId());
+        } catch (ParseException e) {
+            throw new DbException("Error to insert, birthdate incorrect");
+        }
 
         System.out.println("\n=== TEST 5 ====");
         seller = sellerDao.findById(1);
