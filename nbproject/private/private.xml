@@ -9,6 +9,8 @@
             <file>file:/C:/Users/Jonas/Documents/NetBeansProjects/UdemyExercicioJDBCDemo/src/model/entities/Seller.java</file>
             <file>file:/C:/Users/Jonas/Documents/NetBeansProjects/UdemyExercicioJDBCDemo/src/application/Program.java</file>
             <file>file:/C:/Users/Jonas/Documents/NetBeansProjects/UdemyExercicioJDBCDemo/src/model/entities/dao/SellerDao.java</file>
+            <file>file:/C:/Users/Jonas/Documents/NetBeansProjects/UdemyExercicioJDBCDemo/src/model/entities/dao/DaoFactory.java</file>
+            <file>file:/C:/Users/Jonas/Documents/NetBeansProjects/UdemyExercicioJDBCDemo/src/model/entities/dao/impl/SellerDaoJDBC.java</file>
         </group>
     </open-files>
 </project-private>
