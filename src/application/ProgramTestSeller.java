@@ -9,7 +9,7 @@ import model.dao.DaoFactory;
 import model.dao.SellerDao;
 import model.dao.impl.SellerDaoJDBC;
 
-public class Program {
+public class ProgramTestSeller {
 
     public static void main(String[] args) {
 
