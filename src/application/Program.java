@@ -4,9 +4,9 @@ import java.util.Date;
 import java.util.List;
 import model.entities.Department;
 import model.entities.Seller;
-import model.entities.dao.DaoFactory;
-import model.entities.dao.SellerDao;
-import model.entities.dao.impl.SellerDaoJDBC;
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
+import model.dao.impl.SellerDaoJDBC;
 
 public class Program {
 
@@ -30,6 +30,11 @@ public class Program {
         for (Seller obj : list) {
             System.out.println(obj);
         }
+
+        System.out.println("\n=== TEST 4 ====");
+        Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
+        sellerDao.insert(newSeller);
+        System.out.println("Insert! New id = " + newSeller.getId());
 
     }
 
